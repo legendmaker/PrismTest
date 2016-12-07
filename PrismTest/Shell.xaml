@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PrismTest"
         mc:Ignorable="d"
         Title="Shell" Height="300" Width="300">
-    <Grid>
+    <Grid Background="#FF1F5B12">
         
     </Grid>
 </Window>
