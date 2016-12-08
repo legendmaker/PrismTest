@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismTest.Modules.MefTest.ViewModels
+namespace PrismTest.Modules.MefTest
 {
-    class MefTestMainViewModel
+    public class MefTestModule
     {
     }
 }

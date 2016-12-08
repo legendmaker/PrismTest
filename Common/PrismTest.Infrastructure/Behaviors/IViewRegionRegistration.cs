@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrismTest.Modules.MefTest.ViewModels
+namespace PrismTest.Infrastructure.Behaviors
 {
-    class MefTestMainViewModel
+    public interface IViewRegionRegistration
     {
+        string RegionName { get; }
     }
 }

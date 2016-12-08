@@ -1,13 +1,10 @@
 ﻿using Microsoft.Practices.ServiceLocation;
 using Prism.Mef;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition.Hosting;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using Prism.Modularity;
+using PrismTest.Modules.MefTest;
+using Prism.Regions;
+using PrismTest.Infrastructure.Behaviors;
 
 namespace PrismTest
 {
@@ -28,20 +25,15 @@ namespace PrismTest
         {
             base.ConfigureAggregateCatalog();
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(PrismTestBootStrapper).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MefTestModule).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(AutoPopulateExportedViewsBehavior).Assembly));
         }
 
-        protected override IModuleCatalog CreateModuleCatalog()
+        protected override IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()
         {
-            //return base.CreateModuleCatalog();
-            return new ConfigurationModuleCatalog();
-        }
-        protected override void ConfigureContainer()
-        {
-            base.ConfigureContainer();
-        }
-        protected override void RegisterBootstrapperProvidedTypes()
-        {
-            base.RegisterBootstrapperProvidedTypes();
+            var factory = base.ConfigureDefaultRegionBehaviors();
+            factory.AddIfMissing("AutoPopulateExportedViewsBehavior", typeof(AutoPopulateExportedViewsBehavior));
+            return factory;
         }
     }
 }

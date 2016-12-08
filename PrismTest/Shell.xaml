@@ -4,9 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrismTest"
+        xmlns:infrastructure ="clr-namespace:PrismTest.Infrastructure;assembly=PrismTest.Infrastructure"
+        xmlns:prism ="http://www.codeplex.com/prism" 
         mc:Ignorable="d"
         Title="Shell" Height="300" Width="300">
-    <Grid Background="#FF1F5B12">
-        
+    <Grid>
+        <ContentControl Margin="27,35,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" prism:RegionManager.RegionName="{x:Static infrastructure:RegionNames.MefTestRegion}" Height="95" Width="220"/>
     </Grid>
 </Window>

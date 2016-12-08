@@ -10,7 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismTest", "PrismTest\Pris
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{517085B0-27C6-4C42-9EF4-CCA0FDE6D10B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mef", "Modules\Mef\Mef.csproj", "{4FC9E2C2-8824-4087-BE0D-149ACA926966}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MefTest", "Modules\Mef\MefTest.csproj", "{4FC9E2C2-8824-4087-BE0D-149ACA926966}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8F133666-8636-4E9B-A67A-A9DB69A1F62C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismTest.Infrastructure", "Common\PrismTest.Infrastructure\PrismTest.Infrastructure.csproj", "{2D2EC3E7-3DE1-4823-B83D-C924E884A919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,11 +30,16 @@ Global
 		{4FC9E2C2-8824-4087-BE0D-149ACA926966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FC9E2C2-8824-4087-BE0D-149ACA926966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FC9E2C2-8824-4087-BE0D-149ACA926966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2EC3E7-3DE1-4823-B83D-C924E884A919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2EC3E7-3DE1-4823-B83D-C924E884A919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2EC3E7-3DE1-4823-B83D-C924E884A919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2EC3E7-3DE1-4823-B83D-C924E884A919}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4FC9E2C2-8824-4087-BE0D-149ACA926966} = {517085B0-27C6-4C42-9EF4-CCA0FDE6D10B}
+		{2D2EC3E7-3DE1-4823-B83D-C924E884A919} = {8F133666-8636-4E9B-A67A-A9DB69A1F62C}
 	EndGlobalSection
 EndGlobal

@@ -128,6 +128,16 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\PrismTest.Infrastructure\PrismTest.Infrastructure.csproj">
+      <Project>{2d2ec3e7-3de1-4823-b83d-c924e884a919}</Project>
+      <Name>PrismTest.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\Mef\MefTest.csproj">
+      <Project>{4fc9e2c2-8824-4087-be0d-149aca926966}</Project>
+      <Name>MefTest</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
