@@ -24,25 +24,24 @@ namespace PrismTest.Infrastructure.Behaviors
 
         private void AddRegisteredViews()
         {
-            if (this.Region != null)
+            if (Region != null)
             {
-                foreach (var viewEntry in this.RegisteredViews)
+                foreach (var viewEntry in RegisteredViews)
                 {
-                    if (viewEntry.Metadata.RegionName == this.Region.Name)
+                    if (viewEntry.Metadata.RegionName == Region.Name)
                     {
                         var view = viewEntry.Value;
 
-                        if (!this.Region.Views.Contains(view))
+                        if (!Region.Views.Contains(view))
                         {
-                            this.Region.Add(view);
+                            Region.Add(view);
                         }
                     }
                 }
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays", Justification = "MEF injected values"), 
-            ImportMany(AllowRecomposition = true)]
+        [ImportMany(AllowRecomposition = true)]
         public Lazy<object, IViewRegionRegistration>[] RegisteredViews { get; set; }
     }
 }
